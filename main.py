@@ -1,6 +1,21 @@
 import random
-def guesser(x : int) -> bool:
-    pass
+
+
+def guesser(x: int) -> bool:
+    counter = 1
+    picked_number = random.randint(0, x)
+
+    while counter <= 10:
+        guess: int = int(input(f'Attempt: {counter}. Input number that you want to guess: '))
+        if guess == picked_number:
+            return True
+        if guess < picked_number:
+            print("Your guess is lower than actual number")
+        else:
+            print("Your guess is greater than actual number")
+        counter += 1
+
+    return False
 
 
 def main():
@@ -22,4 +37,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+    print('Thank you for playing')
 
