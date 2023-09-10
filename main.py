@@ -10,9 +10,9 @@ def guesser(x: int) -> bool:
         if guess == picked_number:
             return True
         if guess < picked_number:
-            print("Your guess is lower than actual number")
+            print('Your guess is lower than actual number')
         else:
-            print("Your guess is greater than actual number")
+            print('Your guess is greater than actual number')
         counter += 1
 
     return False
@@ -38,4 +38,3 @@ def main():
 if __name__ == '__main__':
     main()
     print('Thank you for playing')
-
